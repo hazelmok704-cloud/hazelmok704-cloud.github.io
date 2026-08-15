@@ -1,16 +1,14 @@
-<!-- Generated with Claude -->
-
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Analytics Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mo Yidi - Business Analytics Portfolio</title>
 
     <style>
-      /* ============================================================
-       BASIC STYLES — students can tweak colors/fonts here
-       ============================================================ */
+      /* ==================== BASIC STYLES ==================== */
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -30,37 +28,57 @@
         padding: 40px 20px;
       }
 
-      /* ---------- HEADER (photo + name + subheading) ---------- */
+      /* ==================== HEADER ==================== */
+
       header {
         text-align: center;
         margin-bottom: 30px;
       }
 
-      /* Empty space for photo — replace with your own <img> if you like */
+      /* Profile photo */
       .photo {
         width: 140px;
         height: 140px;
         border-radius: 50%;
-        background: #ddd;
-        border: 2px dashed #aaa;
         margin: 0 auto 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #888;
-        font-size: 13px;
+        object-fit: cover;
+        display: block;
+        border: 3px solid #2c3e50;
       }
 
       header h1 {
         font-size: 28px;
         margin-bottom: 6px;
-      } /* NAME */
+      }
+
       header p {
         font-size: 16px;
         color: #555;
-      } /* EXPERIENCES */
+      }
 
-      /* ---------- TABS ---------- */
+      /* ==================== CONTACT LINKS ==================== */
+
+      .contact-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .contact-links a {
+        color: #2c3e50;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .contact-links a:hover {
+        text-decoration: underline;
+      }
+
+      /* ==================== TABS ==================== */
+
       .tabs {
         display: flex;
         justify-content: center;
@@ -77,16 +95,22 @@
         border-radius: 4px;
       }
 
+      .tab-button:hover {
+        background: #e8edf2;
+      }
+
       .tab-button.active {
         background: #2c3e50;
         color: #fff;
         border-color: #2c3e50;
       }
 
-      /* ---------- TAB CONTENT ---------- */
+      /* ==================== TAB CONTENT ==================== */
+
       .tab-content {
         display: none;
       }
+
       .tab-content.active {
         display: block;
       }
@@ -98,7 +122,35 @@
         padding: 24px;
       }
 
-      /* ---------- PROJECT CARDS (1 x 3 grid) ---------- */
+      .panel h2 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: #2c3e50;
+      }
+
+      .panel p {
+        margin-bottom: 16px;
+      }
+
+      /* ==================== SKILLS ==================== */
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .skill {
+        background: #e8edf2;
+        color: #2c3e50;
+        padding: 7px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      /* ==================== PROJECT CARDS ==================== */
+
       .cards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -112,34 +164,76 @@
         background: #fff;
       }
 
-      /* Empty space for project photo */
       .card-photo {
         height: 120px;
-        background: #ddd;
-        border-bottom: 1px dashed #aaa;
+        background: #2c3e50;
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #888;
-        font-size: 12px;
+        padding: 15px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
       }
 
       .card-text {
         padding: 14px;
       }
+
       .card-text h3 {
         font-size: 16px;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        color: #2c3e50;
       }
+
       .card-text p {
         font-size: 14px;
         color: #555;
+        margin-bottom: 10px;
       }
 
-      /* ---------- MOBILE: stack cards vertically ---------- */
+      .tools {
+        font-size: 13px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      /* ==================== FOOTER ==================== */
+
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        color: #777;
+        font-size: 13px;
+      }
+
+      /* ==================== MOBILE ==================== */
+
       @media (max-width: 640px) {
+        .container {
+          padding: 25px 15px;
+        }
+
         .cards {
           grid-template-columns: 1fr;
+        }
+
+        .tabs {
+          flex-direction: column;
+        }
+
+        .tab-button {
+          width: 100%;
+        }
+
+        header h1 {
+          font-size: 24px;
+        }
+
+        .photo {
+          width: 120px;
+          height: 120px;
         }
       }
     </style>
@@ -147,88 +241,205 @@
 
   <body>
     <div class="container">
-      <!-- ============================================================
-         HEADER: photo, name, experiences
-         ============================================================ -->
-      <header>
-        <!-- Replace this div with <img src="your-photo.jpg" class="photo"> -->
-        <div class="photo">Photo</div>
 
-        <h1>Your Name</h1>
-        <p>Business Analyst · SQL · Python · Tableau</p>
+      <!-- ==================== HEADER ==================== -->
+
+      <header>
+        <!-- Make sure profile.jpg is in the same folder as index.html -->
+        <img
+          src="profile.jpg"
+          class="photo"
+          alt="Profile photo of Mo Yidi"
+        >
+
+        <h1>Mo Yidi</h1>
+
+        <p>
+          Financial Analyst · Business Analyst · Python · SQL · Excel
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:hazelmok704@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/hazelyidimo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <span>Montreal, Canada</span>
+        </div>
       </header>
 
-      <!-- ============================================================
-         TABS
-         ============================================================ -->
+      <!-- ==================== TABS ==================== -->
+
       <div class="tabs">
-        <button class="tab-button active" onclick="showTab('about')">
+        <button
+          class="tab-button active"
+          onclick="showTab('about', this)"
+        >
           About Me
         </button>
-        <button class="tab-button" onclick="showTab('projects')">
+
+        <button
+          class="tab-button"
+          onclick="showTab('projects', this)"
+        >
           Projects
         </button>
       </div>
 
-      <!-- ---------- TAB 1: ABOUT ME ---------- -->
+      <!-- ==================== ABOUT ME ==================== -->
+
       <div id="about" class="tab-content active">
         <div class="panel">
+          <h2>About Me</h2>
+
           <p>
-            Write a short introduction about yourself here — your background,
-            skills, and what kind of business analytics role you're looking for.
+            I am a Finance undergraduate at Guangdong University of Foreign
+            Studies with experience in real estate investment, wealth
+            management, risk and compliance, and fund analysis.
           </p>
+
+          <p>
+            I use financial data and analytical tools to organize complex
+            information, improve business processes, and support practical
+            decision-making. My experience includes working with Excel,
+            Python, SQL, Bloomberg Terminal, Wind, and iFind.
+          </p>
+
+          <p>
+            I am currently seeking an entry-level Financial Analyst,
+            Business Analyst, or Data Analyst position where I can combine
+            financial knowledge, quantitative analysis, and business
+            problem-solving skills.
+          </p>
+
+          <h2>Skills</h2>
+
+          <div class="skills">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Excel</span>
+            <span class="skill">Bloomberg Terminal</span>
+            <span class="skill">Financial Analysis</span>
+            <span class="skill">Data Analysis</span>
+            <span class="skill">Investment Research</span>
+            <span class="skill">Risk and Compliance</span>
+            <span class="skill">Project Management</span>
+          </div>
         </div>
       </div>
 
-      <!-- ---------- TAB 2: PROJECTS ---------- -->
+      <!-- ==================== PROJECTS ==================== -->
+
       <div id="projects" class="tab-content">
         <div class="cards">
-          <!-- CARD 1 -->
+
+          <!-- PROJECT 1 -->
+
           <div class="card">
-            <div class="card-photo">Project Image</div>
+            <div class="card-photo">
+              Real Estate Investment Analysis
+            </div>
+
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Real Estate Fund Cash-Flow Analysis</h3>
+
+              <p>
+                Reconstructed fund cash flows using investor reports and
+                financial statements. Reconciled paid-in, deployed, and
+                recovered capital to improve the transparency of fund
+                performance analysis.
+              </p>
+
+              <div class="tools">
+                Tools: Excel and financial statements
+              </div>
             </div>
           </div>
 
-          <!-- CARD 2 -->
+          <!-- PROJECT 2 -->
+
           <div class="card">
-            <div class="card-photo">Project Image</div>
+            <div class="card-photo">
+              Corporate Actions Analysis
+            </div>
+
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Corporate Actions Workflow Improvement</h3>
+
+              <p>
+                Analyzed corporate-action data involving dividends, stock
+                splits, option exercises, and mergers and acquisitions.
+                Helped improve workflow capacity and reduce processing errors.
+              </p>
+
+              <div class="tools">
+                Tools: Excel and Bloomberg Terminal
+              </div>
             </div>
           </div>
 
-          <!-- CARD 3 -->
+          <!-- PROJECT 3 -->
+
           <div class="card">
-            <div class="card-photo">Project Image</div>
+            <div class="card-photo">
+              Financial Research
+            </div>
+
             <div class="card-text">
-              <h3>Project Title</h3>
-              <p>Short description of what you did and the tools you used.</p>
+              <h3>Digital Finance and Business Resilience</h3>
+
+              <p>
+                Co-authored research examining how digital inclusive finance
+                affects the resilience of small and micro businesses by
+                reducing transaction costs and financing constraints.
+              </p>
+
+              <div class="tools">
+                Tools: Financial data and economic analysis
+              </div>
             </div>
           </div>
+
         </div>
       </div>
+
+      <!-- ==================== FOOTER ==================== -->
+
+      <footer>
+        © 2026 Mo Yidi · Business Analytics Portfolio
+      </footer>
     </div>
 
-    <!-- ============================================================
-       SIMPLE TAB SWITCHING SCRIPT
-       ============================================================ -->
+    <!-- ==================== JAVASCRIPT ==================== -->
+
     <script>
-      function showTab(id) {
-        // hide all tab contents
-        document.querySelectorAll(".tab-content").forEach(function (el) {
-          el.classList.remove("active");
-        });
-        // remove active state from all buttons
-        document.querySelectorAll(".tab-button").forEach(function (btn) {
-          btn.classList.remove("active");
-        });
-        // show the selected tab + highlight the clicked button
+      function showTab(id, clickedButton) {
+        // Hide all tab content
+        document
+          .querySelectorAll(".tab-content")
+          .forEach(function (content) {
+            content.classList.remove("active");
+          });
+
+        // Remove active style from all buttons
+        document
+          .querySelectorAll(".tab-button")
+          .forEach(function (button) {
+            button.classList.remove("active");
+          });
+
+        // Show selected tab
         document.getElementById(id).classList.add("active");
-        event.target.classList.add("active");
+
+        // Highlight selected button
+        clickedButton.classList.add("active");
       }
     </script>
   </body>
